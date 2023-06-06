@@ -62,16 +62,14 @@ header {
 
 body {
     height: 100vh;
+    width: 100%;
 }
+
 
 .inicio {
     height: 600px;
-    background: linear-gradient(to top, #182d528e, rgb(28, 29, 29)), url(./Imágenes/imagen\ fondo.png);
+    background: linear-gradient(to top, #182d528e, rgb(28, 29, 29)), url(../Imágenes/imagen\ fondo.png);
     background-size: cover;
-}
-
-.fondo {
-    background-image: url("./Imágenes/imagen\ fondo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -128,7 +126,7 @@ body {
 
 .contenedorContenidoDatos {
     background-color: #1c2431;
-    height: 100px;
+    height: 120px;
     display: flex;
     flex-direction: column;
 }
@@ -142,12 +140,12 @@ body {
     color: #82ebeb;
 }
 
-
 .contenido {
     background-image: linear-gradient(135deg, #1c2431, #04434e, #151938);
     background-size: 500%;
     animation: fondoanimado 10s infinite;
 }
+
 .sobremi {
     display: flex;
     flex-direction: column;
@@ -222,7 +220,7 @@ body {
 
 
 .skills {
-    padding: 15px;
+    padding: 85px;
     justify-content: center;
     height: 546px;
     align-items: center;
@@ -284,7 +282,7 @@ body {
 }
 
 .tarjetaProyecto {
-    height: 310px;
+    height: 320px;
     width: 220px;
     margin: 80px;
     transition: all ease 1s;
@@ -311,6 +309,7 @@ body {
 .contenidoTarjeta a {
     color: #ffffff;
     text-decoration: none;
+
 }
 
 .contenidoTarjeta h5 {
@@ -327,6 +326,9 @@ body {
 
 .contenidoTarjeta i {
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-outline-info {
