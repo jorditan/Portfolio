@@ -84,7 +84,7 @@ main {
 .titulo {
     text-align: center;
     color: #82ebeb;
-    padding: 35px;
+    padding: 25px;
 }
 
 .columnaDerecha {
@@ -92,11 +92,111 @@ main {
     float: right;
     display: flex;
     justify-content: center;
+    height: 450px;
 }
 
-.formulario input {
+.campos {
     width: 400px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 7px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #82ebeb;
+    transition: all ease 0.5s;
+    color: white;
+}
+
+.campos:hover {
+    border-bottom: 1px solid #00ffff;
+    transform: translatey(5%);
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+    padding-left: 10px;
+}
+
+.alerta {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    color: red;
+}
+
+
+.contenedorBoton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+button {
+    box-shadow: 0px 0px 4px #82ebeb;
+    transition: all ease 1s;
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+.boton:hover {
+    background-color: #82ebeb;
+    transform: translatey(5px);
+    color: #1c2431;
+}
+
+.columnaIzquierda {
+    width: 50%;
+    float: left;
+    height: 450px
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.contacto h1 {
+    padding-bottom: 20px;
+}
+
+.redes {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2 ,1fr);
+    padding: 20px;
+}
+
+.redes i {
+    font-size: 50px;
+    padding-right: 10px;
+    transition: 0.5s all ease;
+}
+
+.redes i:hover {
+    transform: translatey(-5px);
+}
+
+.contactame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactame i {
+    padding-right: 10px;
 }
