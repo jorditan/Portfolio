@@ -1,9 +1,32 @@
-const nombre = document.getElementById("nombre");
-const email = document.getElementById("email");
+const nombre= document.getElementById("from_name");
+const email = document.getElementById("email__id");
 const telefono = document.getElementById("telefono");
-const mensaje = document.getElementById("mensaje");
+const mensaje = document.getElementById("message");
 const form = document.getElementById("formulario");
 const parrafo = document.getElementById("parrafo");
+
+const enviarmail = () => {
+    const btn = document.getElementById('button');
+
+document.getElementById('formulario')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_r41ga1a';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        btn.value = 'Send Email';
+        alert('¡Mail enviado!');
+    }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+    });
+});
+}
 
 form.addEventListener("submit", e=>{
     e.preventDefault();
@@ -35,8 +58,17 @@ form.addEventListener("submit", e=>{
         parrafo.innerHTML = alertas;
         setTimeout(function() {
             parrafo.innerHTML = "";
+            nombre.value = "";
+            telefono.value = "";
+            mensaje.value = "";
+            email.value= "";
         }, 2000);
     }else{
-        parrafo.innerHTML = "Enviado";
+        enviarmail();
     }
+
 })
+
+
+
+

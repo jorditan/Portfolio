@@ -1,68 +1,16 @@
+html , body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family:'Varela Round', sans-serif;
     margin: 0;
-}
-
-header {
-    background-color: #1c2431;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar {
-    display: flex;
-    width: 70%;
-    align-items: center;
-    justify-content: flex-end;
-    height: 70px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 150px;
-}
-
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
-
-.navbar ul li {
-    display: inline;
-    padding: 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    transition: all ease 0.5s;
-}
-
-.navbar ul li a:hover {
-    color: #82ebeb;
-    font-size: 18px;
-}
-
-
-.navbar-responsive {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    color: #f8f0af;
-    cursor: pointer;
-    border-radius: 5px;
-    display: none;
-}
-
-body {
-    height: 100vh;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -72,8 +20,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    position:relative;
 }
 
 .contenedorBienvenida {
@@ -102,7 +48,7 @@ body {
 }
 
 
-.container {
+.contenedor {
     display: flex;
     justify-content: center;
 }
@@ -229,7 +175,7 @@ body {
 
 .skills h1 {
     font-size: 3em;
-    margin-left: 30px;
+    text-align: center;
 }
 
 .lenguajes {
@@ -331,6 +277,85 @@ body {
     justify-content: center;
 }
 
+
+
 .btn-outline-info {
     height: 40px;
+}
+
+/* MENU RESPONSIVE  */
+
+@media  screen and (max-width: 1088px) {
+    .contenidoProyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjetaProyecto{
+        width: 350px;
+    }
+
+    .contenidoTarjeta{
+        width: 100%;
+    }
+
+    .contenidoTarjeta img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:668px){
+    .contenidoSeccion {
+        width: 80%;
+    }
+
+    .contenidoSeccion p {
+        text-align: justify;
+    }
+}
+
+
+@media screen and (max-width:628px){
+    .lenguajes ul {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+}
+
+    .skills {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .contenedorBienvenida {
+    text-align: center;
+    }
+
+    .contenidoSeccion {
+        margin: 22px;
+    }
+
+    .datos-imagen {
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor {
+    width: 290px;
+    display: flex;
+    } 
+
+
+    .lenguajes li {
+        margin: 20px;
+        margin-top: 40px;
+    }
+
+    .tarjetaProyecto {
+        width: 300px;
+    }
+
+    .fila {
+        width: 300px;
+    }
+
 }
