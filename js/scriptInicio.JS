@@ -10,6 +10,33 @@ cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
 
+const cerrarMenu =() =>  {
+    nav.classList.remove("visible");
+} 
+
+document.addEventListener("DOMContentLoaded", function() {
+    let enlacesMenu = document.querySelectorAll("#nav li a");
+
+    enlacesMenu.forEach(function(enlace) {
+        enlace.addEventListener("click", function() {
+            cerrarMenu();
+        });
+    });
+});
+    
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let enlacesMenu = document.querySelectorAll("#nav li a");
+
+    enlacesMenu.forEach(function(enlace) {
+    enlace.addEventListener("click", function() {
+        let menuHamburguesa = document.getElementById("nav");
+        menuHamburguesa.classList.remove("abierto");
+    });
+    });
+});
+
 
 const menuLinks = document.querySelectorAll('.nav-list a[href^="#"]');
 
