@@ -3,15 +3,18 @@ const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
 abrir.addEventListener("click", () => {
+	document.body.classList.add('no-scroll');
 	nav.classList.add("visible");
 })
 
 cerrar.addEventListener("click", () => {
 	nav.classList.remove("visible");
+	document.body.classList.remove('no-scroll');
 })
 
 const cerrarMenu = () => {
 	nav.classList.remove("visible");
+	document.body.classList.remove('no-scroll');
 }
 
 document.addEventListener("DOMContentLoaded", function() {
