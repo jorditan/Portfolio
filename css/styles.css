@@ -1,1 +1,391 @@
-body,html{width:100%;overflow-x:hidden}html{scroll-behavior:smooth}*{font-family:'Varela Round',sans-serif;margin:0;box-sizing:border-box}.inicio{height:600px;background:linear-gradient(to top,#182d528e,#1c1d1d) center/cover no-repeat,url(../Imágenes/imagen\ fondo.png) center/cover no-repeat}.contenedorBienvenida{width:100%;display:flex;justify-content:center;align-items:flex-start;height:200px}.contenidoBienvenida{display:flex;flex-direction:column;padding:50px;color:#fff}.contenedor,.contenedorImagenDatos,.contenidoProyectos{justify-content:center;display:flex}.contenedorBienvenida h2{text-align:center;font-size:25px;padding:10px;margin-top:10px;font-family:Righteous,cursive;font-weight:100;color:#82ebeb}.contenedorImagenDatos{width:400px;height:300px;flex-direction:column;border-radius:5%;overflow:hidden}.contenidoImagen{height:200px;display:flex;justify-content:center;align-items:center}.contenedorContenidoDatos{background-color:#1c2431;height:120px;display:flex;flex-direction:column}.contenidoDatos,.sobremi{flex-direction:column;display:flex}.contenidoDatos{margin-top:20px;justify-content:center;align-items:center;color:#82ebeb}.contenido{background-image:linear-gradient(135deg,#1c2431,#04434e,#151938);background-size:500%;animation:10s infinite fondoanimado}.sobremi{align-items:center;justify-content:flex-start}@keyframes fondoanimado{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}.contenidoSeccion{flex-direction:column;display:flex;align-items:center;color:#fff;width:650px;margin-top:80px}.fila,.skills{justify-content:center}.contenidoSeccion h2{color:#82ebeb;font-size:3em}.contenidoSeccion p{font-size:19px;text-align:center;margin:10px}.fila{margin-top:20px;width:350px;display:flex;border:1px solid #82ebeb;border-radius:10px;box-shadow:0 0 8px #82ebeb;transition:1s}.datosPersonales h3{color:#82ebeb;font-size:2em}.datosPersonales ul,.lenguajes ul{padding:0;margin:0;color:#fff;list-style:none}.datosPersonales ul{text-align:center;font-size:15px}.datosPersonales{padding:15px;display:flex;align-items:center;flex-direction:column;justify-content:center}.skills{padding:85px;height:546px;align-items:center;color:#82ebeb}.skills h1{font-size:3em;text-align:center}.lenguajes{display:grid;justify-content:center;align-items:center}.lenguajes ul{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:30px}.lenguajes li{margin:40px;font-size:30px;display:flex;flex-direction:column;align-items:center}.lenguajes i{display:flex;justify-content:center;font-size:70px}.proyectos h1{color:#82ebeb;font-size:3em;display:flex;justify-content:center}.proyectos{margin-top:100px}.tarjetaProyecto{height:320px;width:220px;margin:80px;transition:1s;display:flex;border-radius:5%;overflow:hidden;box-shadow:0 0 5px #82ebeb}.tarjetaProyecto:hover{box-shadow:0 1px 10px 5px #82ebeb}.contenidoTarjeta{display:flex;justify-content:space-between;flex-direction:column;align-items:center;width:220px;height:300px}.contenidoTarjeta a{color:#fff;text-decoration:none}.contenidoTarjeta h5{color:#fff;text-align:center}.contenidoTarjeta img{display:flex;height:150px;position:relative}.contenidoTarjeta i{font-size:28px;display:flex;align-items:center;justify-content:center}.btn-outline-info{height:40px}@media screen and (max-width:1088px){.contenidoProyectos{flex-direction:column;align-items:center}.tarjetaProyecto{width:350px}.contenidoTarjeta,.contenidoTarjeta img{width:100%}}@media screen and (max-width:668px){.contenidoSeccion{width:80%}.contenidoSeccion p{text-align:justify}}@media screen and (max-width:628px){.lenguajes ul{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr)}.skills{height:700px}}@media screen and (max-width:480px){.contenedorBienvenida{text-align:center}.contenidoSeccion{margin:22px}.datos-imagen{display:flex;justify-content:center}.contenedor{width:290px;display:flex}.lenguajes li{margin:40px 20px 20px}.fila,.tarjetaProyecto{width:300px}}
+body,html {
+    width: 100%;
+    overflow-x: hidden
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    font-family: 'Varela Round',sans-serif;
+    margin: 0;
+    box-sizing: border-box
+}
+
+.inicio {
+    height: 100vh;
+    background: linear-gradient(to top,#182d528e,#1c1d1d) center/cover no-repeat,url(../Imágenes/imagen\ fondo.png) center/cover no-repeat
+}
+
+.contenedorBienvenida {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 20%
+}
+
+.contenidoBienvenida {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: #fff
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #82ebeb;
+}
+
+.contenedorInicio {
+    height: auto;
+}
+
+
+.contenidoProyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.contenedorImagenDatos {
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+    border-radius: 5%;
+    overflow: hidden
+}
+
+
+.contenedorContenidoDatos {
+    padding-top: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contenidoDatos {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 2em;
+    width: 100%;
+}
+
+
+.contenidoImagen {
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenedorImagen {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.foto {
+    height: 90%;
+}
+
+.nombre {
+    font-weight: 800;
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitulo {
+    color: #82ebeb;
+    font-weight: 900;
+}
+
+.textoSubtitulo {
+    color: white;
+}
+
+.strong {
+    color: #82ebeb
+}
+
+.contenido {
+    background-image: linear-gradient(135deg,#1c2431,#04434e,#151938);
+    background-size: 500%;
+    animation: 10s infinite fondoanimado
+}
+
+.sobremi {
+    align-items: center;
+    justify-content: flex-start
+}
+
+@keyframes fondoanimado {
+    0%,100% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+}
+
+.sobremi {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.contenidoSeccion {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 650px;
+}
+
+.fila,.skills {
+    justify-content: center
+}
+
+.contenidoSeccion h2 {
+    color: #82ebeb;
+    font-size: 3em
+}
+
+.contenidoSeccion p {
+    font-size: 19px;
+    text-align: center;
+    margin: 10px
+}
+
+.fila {
+    margin-top: 20px;
+    width: 350px;
+    display: flex;
+    border: 1px solid #82ebeb;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #82ebeb;
+    transition: 1s
+}
+
+.datosPersonales h3 {
+    color: #82ebeb;
+    font-size: 2em
+}
+
+.datosPersonales ul,.lenguajes ul {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    list-style: none
+}
+
+.datosPersonales ul {
+    text-align: center;
+    font-size: 15px
+}
+
+.datosPersonales {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center
+}
+
+.skills {
+    padding: 85px;
+    height: 546px;
+    align-items: center;
+    color: #82ebeb
+}
+
+.skills h1 {
+    font-size: 3em;
+    text-align: center
+}
+
+.lenguajes {
+    display: grid;
+    justify-content: center;
+    align-items: center
+}
+
+.lenguajes ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px
+}
+
+.lenguajes li {
+    margin: 40px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.lenguajes i {
+    display: flex;
+    justify-content: center;
+    font-size: 70px
+}
+
+.proyectos h1 {
+    color: #82ebeb;
+    font-size: 3em;
+    display: flex;
+    justify-content: center
+}
+
+.proyectos {
+    margin-top: 100px
+}
+
+.tarjetaProyecto {
+    height: 300px;
+    width: 50%;
+    flex-direction: column;
+    background-color: #1c2431;
+    transition: 1s;
+    margin: 35px;
+    display: flex;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 0px 6px #39cccc
+}
+
+.tarjetaProyecto:hover {
+    box-shadow: 0 1px 10px 5px #82ebeb
+}
+
+.contenidoTarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contenidoTarjeta a {
+    color: #fff;
+    text-decoration: none
+}
+
+.contenidoTarjeta h5 {
+    color: #fff;
+    font-weight: 300;
+    text-align: center
+}
+
+.imagenProyecto {
+    display: flex;
+    height: 150px;
+    position: relative;
+    width: 100%;
+}
+
+.imagenProyecto img {
+    width: 100%;
+}
+
+.contenidoTarjeta i {
+    color: #82ebeb;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all ease;
+}
+
+.botonProyecto {
+    border: 1px solid #82ebeb;
+    background-color: transparent;
+    border-radius: 40px;
+    height: 40px;
+    transition: 1s all ease;
+}
+
+.botonProyecto:hover,
+.contenidoTarjeta i:hover {
+    transform: translateY(-8px);
+}
+
+.botonProyecto:hover {
+    background-color: #82ebeb;
+    box-shadow: 0 0px 6px #39cccc
+}
+
+@media screen and (max-width: 1088px) {
+    .contenidoProyectos {
+        display: flex;
+        flex-direction:column;
+        align-items: center
+    }
+
+    .tarjetaProyecto {
+        width: 30%;
+        height: 95%;
+    }
+
+    .contenidoTarjeta,.contenidoTarjeta img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .contenidoSeccion {
+        width:80%
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .lenguajes ul {
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr)
+    }
+
+    .skills {
+        height: 700px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedorBienvenida {
+        text-align:center
+    }
+
+    .contenidoSeccion {
+        margin: 22px
+    }
+
+    .datos-imagen {
+        display: flex;
+        justify-content: center
+    }
+
+    .contenedor {
+        width: 290px;
+        display: flex
+    }
+
+    .lenguajes li {
+        margin: 40px 20px 20px
+    }
+
+    .fila,.tarjetaProyecto {
+        width: 300px
+    }
+}
+
