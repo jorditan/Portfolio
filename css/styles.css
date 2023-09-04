@@ -263,11 +263,11 @@ html {
     display: flex;
     border-radius: 5%;
     overflow: hidden;
-    box-shadow: 0 0px 6px #39cccc
+    box-shadow: 0 0px 8px 2px #39cccc
 }
 
 .tarjetaProyecto:hover {
-    box-shadow: 0 1px 10px 5px #82ebeb
+    box-shadow: 0 px 10px 5px #82ebeb
 }
 
 .contenidoTarjeta {
@@ -298,6 +298,7 @@ html {
 
 .imagenProyecto img {
     width: 100%;
+    height: 100%;
 }
 
 .contenidoTarjeta i {
@@ -336,7 +337,7 @@ html {
 
     .tarjetaProyecto {
         width: 30%;
-        height: 95%;
+        height: 20rem;
     }
 
     .contenidoTarjeta,.contenidoTarjeta img {
@@ -347,6 +348,24 @@ html {
 @media screen and (max-width: 668px) {
     .contenidoSeccion {
         width:80%
+    }
+    /*
+    .contenedorImagenDatos {
+        flex-direction: column;
+    }
+    .contenedorContenidoDatos {
+        height: 50%;
+        width: 80%;
+    }
+    .contenidoImagen {
+        height: 50%;
+        width: 100%;
+    }   */
+    .contenedorContenidoDatos {
+        width: 80%;
+    }
+    .foto {
+        height: 90%;
     }
 }
 
@@ -385,7 +404,21 @@ html {
     }
 
     .fila,.tarjetaProyecto {
-        width: 300px
+        width: 300px;
+        height: 18rem;
+    }
+    .contenedorImagenDatos {
+        flex-direction: column;
+    }
+    .contenedorContenidoDatos {
+        height: 50%;
+    }
+    .contenidoImagen {
+        height: 50%;
+        width: 100%;
+    }
+    .foto {
+        height: 100%;
     }
 }
 
