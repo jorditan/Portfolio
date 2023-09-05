@@ -18,7 +18,7 @@
         <script src="./js/scriptInicio.js" defer="defer"></script>
         <link rel="icon" type="image/icon" href="./Imágenes/Logo chico.ico">
     </head>
-    <body>
+    <body">
         <header>
             <div class="logo">
                 <a href="./index.html">
@@ -29,19 +29,19 @@
                 <i id="cerrar" class="fa-solid fa-xmark" style="color:#f8f0af"></i>
                 <ul class="nav-list">
                     <li>
-                        <a href="#sobremi" onclick="cerrrarMenu">SOBRE MÍ</a>
+                        <a  class="item" href="#sobremi">SOBRE MÍ</a>
                     </li>
                     <li>
-                        <a href="#skills" onclick="cerrrarMenu">HABILIDADES</a>
+                        <a class="item" href="#skills">HABILIDADES</a>
                     </li>
                     <li>
-                        <a href="#proyectos" onclick="cerrrarMenu">PROYECTOS</a>
+                        <a  class="item"  href="#proyectos">PROYECTOS</a>
                     </li>
                     <li>
-                        <a href="./curriculum.html" onclick="cerrrarMenu">CURRÍCULUM</a>
+                        <a class="item"  href="./curriculum.html">CURRÍCULUM</a>
                     </li>
                     <li>
-                        <a href="./contacto.html" onclick="cerrrarMenu">CONTACTO</a>
+                        <a class="item"  href="./contacto.html">CONTACTO</a>
                     </li>
                 </ul>
             </nav>
@@ -56,9 +56,16 @@
                     <div class="contenedorContenidoDatos">
                         <div class="contenidoDatos">
                             <h1 class="nombre">Matías Owen Jordán</h1>
-                            <span class="subtitulo">Desarrollador Frontend | Trainee</span><br>
-                            <span class="textoSubtitulo"> Estudiante de la tecnicatura en programación. Soy una persona muy resolutiva y que está en constante aprendizaje. El <b class="strong">diseño</b> web y gráfico también es
+                            <p class="subtitulo">Desarrollador Frontend | Trainee</p><br>
+                            <p class="textoSubtitulo"> Estudiante de la tecnicatura en programación. Soy una persona muy resolutiva y que está en constante aprendizaje. El <span class="strong">diseño<span/> web y gráfico también es
                             uno de mis intereses principales.</span>
+                            <div class="redesSociales">
+                                <ul>
+                                    <li class="link"><a href="https://github.com/jorditan" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                                    <li class="link"><a href="https://www.instagram.com/matii.jordan27/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li class="link"><a href="https://www.linkedin.com/in/mat%C3%ADas-jord%C3%A1n/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="contenidoImagen">
@@ -77,47 +84,46 @@
                         </p>
                     </div>
                     <div class="fila">
-                        <div class="datosPersonales">
-                            <h3>Datos personales</h3>
-                            <ul>
-                                <li>18 años</li>
-                                <li>Buenos Aires, Argentina</li>
-                                <li>Estudiante tecnicatura programación. UNAHUR</li>
-                                <li>Proactivo y organizado</li>
-                                <li>Interés por la cultura</li>
-                            </ul>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p class="title">Datos personales</p>
+                                    <p>¿Querés ver?</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">18 años</p>
+                                    <p>Proactivo</p>
+                                    <p>Estudiante programación</p>
+                                    <p>Interés cultural</p>
+                                    <p>Haedo, Buenos Aires</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="skills" id="skills">
                     <h1>Habilidades</h1>
-                    <div class="lenguajes">
-                        <ul>
-                            <li>
-                                <i class="fa-brands fa-html5" style="color:#ff470a"></i>
-                                HTML5
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-css3-alt" style="color:#3d84ff"></i>
-                                CSS3
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-square-js" style="color:#fbff00"></i>
-                                Javascript
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-bootstrap" style="color:#6f42c1"></i>
-                                Bootstrap
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-sass" style="color:red"></i>
-                                SASS
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-git-alt" style="color:#fb4323"></i>
-                                GIT
-                            </li>
-                        </ul>
+                        <div class="slider">
+                            <div class="sliderTrack">
+                                <img src="./Imágenes/sass remove.png" alt="SASS">
+                                <img src="./Imágenes/JS.png" alt="Javascript">
+                                <img src="./Imágenes/Bootrstrap remove.png" alt="Bootstrap">
+                                <img src="./Imágenes/CSS remove.png" alt="CSS">
+                                <img src="./Imágenes/HTML remove.png" alt="HTML">
+                                <img src="./Imágenes/Illustrator remove.png" alt="Illustrator">
+                                <img src="./Imágenes/Photshop REMOVE.png" alt="Photoshop">
+                                <img src="./Imágenes/Git remove.png" alt="Git">
+                            </div>
+                            <div class="sliderTrack">
+                                <img src="./Imágenes/sass remove.png" alt="SASS">
+                                <img src="./Imágenes/JS.png" alt="Javascript">
+                                <img src="./Imágenes/Bootrstrap remove.png" alt="Bootstrap">
+                                <img src="./Imágenes/CSS remove.png" alt="CSS">
+                                <img src="./Imágenes/HTML remove.png" alt="HTML">
+                                <img src="./Imágenes/Illustrator remove.png" alt="Illustrator">
+                                <img src="./Imágenes/Photshop REMOVE.png" alt="Photoshop">
+                                <img src="./Imágenes/Git remove.png" alt="Git">
+                            </div>
                     </div>
                 </section>
                 <section class="proyectos" id="proyectos">
