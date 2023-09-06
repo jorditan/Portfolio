@@ -1,3 +1,6 @@
+@import './media.css';
+@import './stylesHeader.css';
+
 body,html {
     width: 100%;
     overflow-x: hidden
@@ -11,6 +14,11 @@ html {
     font-family: 'Varela Round',sans-serif;
     margin: 0;
     box-sizing: border-box
+}
+
+
+.visible {
+    opacity: 1;
 }
 
 .inicio {
@@ -143,9 +151,13 @@ html {
     animation: 10s infinite fondoanimado
 }
 
-.sobremi {
+
+#sobremi {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
     align-items: center;
-    justify-content: flex-start
 }
 
 @keyframes fondoanimado {
@@ -167,13 +179,6 @@ html {
     }
 }
 
-.sobremi {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2rem;
-}
-
 .contenidoSeccion {
     flex-direction: column;
     display: flex;
@@ -182,7 +187,11 @@ html {
     width: 650px;
 }
 
-.fila,.skills {
+.contenedorTarjeta {
+    padding-top: 1.5rem;
+}
+
+.contenedorTarjeta, #skills {
     justify-content: center
 }
 
@@ -251,16 +260,10 @@ html {
     transform: rotateY(180deg);
 }
 
-.skills {
+#skills {
     height: 40vh;
 }
 
-.skills h1 {
-    font-size: 3rem;
-    color: #82ebeb;
-    text-align: center;
-    margin-top: 80px;
-}
 
 .slider {
     padding: 80px 0;
@@ -298,15 +301,19 @@ html {
     }
 }
 
-.proyectos h1 {
-    color: #82ebeb;
-    font-size: 3em;
-    display: flex;
-    justify-content: center
+#proyectos {
+    margin-top: 100px;
 }
 
-.proyectos {
-    margin-top: 100px
+.animado {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .7s ease-in-out all;
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .tarjetaProyecto {
@@ -391,10 +398,36 @@ html {
     box-shadow: 0 0px 6px #39cccc
 }
 
-.tituloSeccion {
-    font-family: 'Varela Round', sans-serif;
-    font-weight: 800;
-    color: #82ebeb;
+
+.textoNeon {
+    margin-top: 20px;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s linear;
+    color: transparent;
+    -webkit-text-stroke: 1px #82ebeb;
+    background-image: linear-gradient(to left, rgb(42, 235, 235), rgba(4, 63, 97, 0.87));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: movimiento 30s linear infinite
+}
+
+@keyframes movimiento {
+    100% {
+        background-position: 2000px 0px;
+    }
+}
+
+.textoNeon:hover {
+    text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.5),
+    0 0 60px rgba(0, 255, 255, 0.5),
+    0 0 80px rgba(0, 255, 255, 0.5),
+    0 0 160px rgba(0, 255, 255, 0.5),
+    0 0 320px rgba(0, 255, 255, 0.5);
 }
 
 @media screen and (max-width: 1088px) {
@@ -402,6 +435,10 @@ html {
         display: flex;
         flex-direction:column;
         align-items: center
+    }
+
+    .sobremi {
+        justify-content: space-evenly;
     }
 
     .tarjetaProyecto {
@@ -418,18 +455,6 @@ html {
     .contenidoSeccion {
         width:80%
     }
-    /*
-    .contenedorImagenDatos {
-        flex-direction: column;
-    }
-    .contenedorContenidoDatos {
-        height: 50%;
-        width: 80%;
-    }
-    .contenidoImagen {
-        height: 50%;
-        width: 100%;
-    }   */
     .contenedorContenidoDatos {
         width: 80%;
     }
@@ -515,4 +540,6 @@ html {
         font-size: 4rem;
     }
 }
+
+
 
