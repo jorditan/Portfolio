@@ -1,0 +1,565 @@
+@import './stylesHeader.css';
+
+body,html {
+    width: 100%;
+    overflow-x: hidden
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    font-family: 'Varela Round',sans-serif;
+    margin: 0;
+    box-sizing: border-box
+}
+
+
+.visible {
+    opacity: 1;
+}
+
+/* -------------------------------------------- INICIO  ------------------------------------------------*/
+.inicio {
+    height: 90vh;
+    background: linear-gradient(to top,#182d528e,#1c1d1d) center/cover no-repeat,url(../Imágenes/imagen\ fondo.png) center/cover no-repeat
+}
+
+.contenedorBienvenida {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 20%
+}
+
+.contenidoBienvenida {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: #fff
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #82ebeb;
+}
+
+.contenedorInicio {
+    height: auto;
+}
+
+
+.contenedorImagenDatos {
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+    border-radius: 5%;
+    overflow: hidden;
+    animation: slide-in 1s ;
+}
+
+
+.contenedorContenidoDatos {
+    padding-top: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.contenidoDatos {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 2em;
+    width: 100%;
+}
+
+
+.contenidoImagen {
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenedorImagen {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.foto {
+    height: 85%;
+}
+
+.nombre {
+    font-weight: 800;
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitulo {
+    color: #82ebeb;
+    font-weight: 900;
+}
+
+.textoSubtitulo {
+    color: white;
+}
+
+.strong {
+    color: #82ebeb;
+    font-weight: 800;
+}
+
+.redesSociales {
+    padding-top: 25px;
+    display: flex;
+}
+
+.redesSociales ul {
+    padding: 0px;
+}
+
+.redesSociales .link {
+    list-style: none;
+    display: inline;
+    margin: 0px 10px;
+    font-size: 30px;
+}
+
+.redesSociales .link i {
+    color: #82ebeb;
+    transition: .5s;
+}
+
+.redesSociales .link i:hover {
+    font-size: 35px;
+}
+
+/* -------------------------------------------- SOBRE MI  ------------------------------------------------*/
+
+.contenido {
+    background-image: linear-gradient(135deg,#1c2431,#04434e,#151938);
+    background-size: 500%;
+    animation: 10s infinite fondoanimado
+}
+
+#sobremi {
+    height: 100vh;
+}
+
+.contenidoSobreMi {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contenidoSeccion {
+    margin-bottom: 2em;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 50%;
+}
+
+.contenedorTarjeta {
+    padding-top: 1.5rem;
+}
+
+.contenedorTarjeta, #skills {
+    justify-content: center
+}
+
+
+.contenidoSeccion p {
+    font-size: 19px;
+    text-align: center;
+    margin: 10px
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 260px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px rgba(0,0,0,.5);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #82ebeb 60%, #39cccc 88%,
+    #04434e 40%, #024747 48%);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #151938 30%, #04434e 88%,
+    #39cccc 40%, #1c1d1d 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* -------------------------------------------- SKILLS  ------------------------------------------------*/
+#skills {
+    height: 40vh;
+}
+
+.contenidoSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.slider {
+    padding: 80px 0;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.sliderTrack {
+    display: inline-block;
+    margin: 30px;
+    animation: 20s slide infinite linear;
+    z-index: 1;
+}
+
+.sliderTrack img {
+    height: 80px;
+    margin: 0px 40px;
+    transition: .8s;
+}
+
+.sliderTrack img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* -------------------------------------------- PROYECTOS ------------------------------------------------*/
+#proyectos {
+    margin-top: 100px;
+}
+
+
+
+.animado {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .7s ease-in-out all;
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tarjetaProyecto {
+    height: 300px;
+    width: 35%;
+    flex-direction: column;
+    background-color: #1c2431;
+    transition: 1s;
+    margin: 25px;
+    display: flex;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 0px 8px 2px #39cccc
+}
+
+.tarjetaProyecto:hover {
+    box-shadow: 0px 0px 12px 5px #82ebeb
+}
+
+.contenidoProyectos {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.contenidoTarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contenidoTarjeta a {
+    color: #fff;
+    text-decoration: none
+}
+
+.contenidoTarjeta h5 {
+    color: #fff;
+    font-weight: 300;
+    text-align: center
+}
+
+.imagenProyecto {
+    display: flex;
+    height: 150px;
+    position: relative;
+    width: 100%;
+}
+
+.imagenProyecto img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenidoTarjeta i {
+    color: #82ebeb;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all ease;
+}
+
+.botonProyecto {
+    border: 1px solid #82ebeb;
+    background-color: transparent;
+    border-radius: 40px;
+    height: 40px;
+    transition: 1s all ease;
+}
+
+.botonProyecto:hover,
+.contenidoTarjeta i:hover {
+    transform: translateY(-5px);
+}
+
+.botonProyecto:hover {
+    background-color: #82ebeb;
+    box-shadow: 0 0px 6px #39cccc
+}
+
+.contenedorNeon {
+    display: flex;
+    justify-content: center;
+}
+
+.textoNeon {
+    margin-top: 20px;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s linear;
+    color: transparent;
+    -webkit-text-stroke: 1px #82ebeb;
+    background-image: linear-gradient(to left, rgb(42, 235, 235), rgba(4, 63, 97, 0.87));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: movimiento 30s linear infinite
+}
+
+
+.textoNeon:hover {
+    text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.5),
+    0 0 60px rgba(0, 255, 255, 0.5),
+    0 0 80px rgba(0, 255, 255, 0.5),
+    0 0 160px rgba(0, 255, 255, 0.5),
+    0 0 320px rgba(0, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 1088px) {
+    .contenidoProyectos {
+        display: flex;
+        flex-direction:column;
+        align-items: center
+    }
+
+    #proyectos {
+        margin-top: 0px;
+    }
+
+    #sobremi {
+        justify-content: space-evenly;
+    }
+
+    .tarjetaProyecto {
+        width: 30%;
+        height: 20rem;
+    }
+
+    .contenidoTarjeta,.contenidoTarjeta img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .contenidoSeccion {
+        width:80%
+    }
+    .contenedorContenidoDatos {
+        width: 80%;
+    }
+    .foto {
+        height: 90%;
+    }
+    .tarjetaProyecto {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .lenguajes ul {
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr)
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedorBienvenida {
+        text-align:center
+    }
+
+    .contenidoSeccion {
+        margin: 22px
+    }
+
+    .datos-imagen {
+        display: flex;
+        justify-content: center
+    }
+
+    .contenedor {
+        width: 290px;
+        display: flex
+    }
+
+    .lenguajes li {
+        margin: 40px 20px 20px
+    }
+
+    .fila,.tarjetaProyecto {
+        height: 18rem;
+    }
+    .contenedorImagenDatos {
+        height: 100vh;
+        flex-direction: column;
+    }
+    .contenedorContenidoDatos {
+        height: auto;
+        width: 70%;
+    }
+    .contenidoImagen {
+        height: 42%;
+        width: 100%;
+    }
+    .nombre {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .textoNeon {
+        font-size: 2.5em;
+    }
+    .contenedorImagenDatos {
+        height: 100vh;
+        flex-direction: column;
+    }
+    .contenedorContenidoDatos {
+        height: 55%;
+        width: 80%;
+        padding-top: 0px;
+    }
+    .contenidoImagen {
+        width: 100%;
+        height: 35%;
+    }
+    .foto {
+        height: 100%;
+    }
+    .nombre {
+        font-size: 4rem;
+    }
+}
+
+@keyframes fondoanimado {
+    0%,100% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movimiento {
+    100% {
+        background-position: 2000px 0px;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
