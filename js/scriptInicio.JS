@@ -1,18 +1,30 @@
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
+const menuLinks = document.querySelectorAll('.nav-list a[href^="#"]');
+const sobremi = document.getElementById('sobremi');
+const skills = document.getElementById('skills');
+const proyectos = document.getElementById('proyectos');
+
+// Funcionalidad barra de navegación responsive
 
 abrir.addEventListener("click", () => {
+	/*
+		Abre el menú hamburgesa y no nos permite scrolear
+	*/
 	document.body.classList.add('no-scroll');
 	nav.classList.add("visible");
 })
 
 cerrar.addEventListener("click", () => {
+	/*
+		Cierra el menú hamburgesa y nos permite volver a scrollear
+	*/
 	nav.classList.remove("visible");
 	document.body.classList.remove('no-scroll');
 })
 
-const cerrarMenu = () => {
+const cerrarMenu = () => { // Funcion creada para cerrar el
 	nav.classList.remove("visible");
 	document.body.classList.remove('no-scroll');
 }
@@ -28,6 +40,40 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+const aparecer = (entradas, observador) => {
+	/*
+	Funcion para aprecer contenido a medida
+	que aparece en el viewport
+	*/
+	entradas.forEach((entrada) => {
+		if(entrada.isIntersecting){
+			entrada.target.classList.add('visible');
+		}
+		else {
+			entrada.target.classList.remove('visible');
+		}
+	})
+}
+
+const observador = new IntersectionObserver(aparecer, {
+	/*
+		Intersección de observador para que ejecute la funcion *aparecer*
+		cada vez que se observe el contenido pedido.
+	*/
+	root: null,
+	threshold: 0.2,
+});
+
+observador.observe(sobremi);
+observador.observe(skills);
+observador.observe(proyectos);
+
+
+
+/*
+	Código que hace la barra smooth
+*/
+
 
 document.addEventListener("DOMContentLoaded", function() {
 	let enlacesMenu = document.querySelectorAll("#nav li a");
@@ -41,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-const menuLinks = document.querySelectorAll('.nav-list a[href^="#"]');
 
 function coneguirDistanceDeArriba(element) {
 	const id = element.getAttribute("href");
