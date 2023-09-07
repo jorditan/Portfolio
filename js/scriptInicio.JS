@@ -39,13 +39,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 
-/*
+
+const aparecer = (entradas, observador) => {
+	/*
 	Funcion para aprecer contenido a medida
 	que aparece en el viewport
-*/
-const aparecer = (entradas, observador) => {
-	// console.log(entradas);
-	// console.log(observador);
+	*/
 	entradas.forEach((entrada) => {
 		if(entrada.isIntersecting){
 			entrada.target.classList.add('visible');
@@ -57,6 +56,10 @@ const aparecer = (entradas, observador) => {
 }
 
 const observador = new IntersectionObserver(aparecer, {
+	/*
+		Intersección de observador para que ejecute la funcion *aparecer*
+		cada vez que se observe el contenido pedido.
+	*/
 	root: null,
 	threshold: 0.2,
 });

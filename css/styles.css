@@ -1,4 +1,3 @@
-@import './media.css';
 @import './stylesHeader.css';
 
 body,html {
@@ -21,6 +20,7 @@ html {
     opacity: 1;
 }
 
+/* -------------------------------------------- INICIO  ------------------------------------------------*/
 .inicio {
     height: 90vh;
     background: linear-gradient(to top,#182d528e,#1c1d1d) center/cover no-repeat,url(../Imágenes/imagen\ fondo.png) center/cover no-repeat
@@ -121,6 +121,7 @@ html {
 }
 
 .redesSociales {
+    padding-top: 25px;
     display: flex;
 }
 
@@ -144,6 +145,7 @@ html {
     font-size: 35px;
 }
 
+/* -------------------------------------------- SOBRE MI  ------------------------------------------------*/
 
 .contenido {
     background-image: linear-gradient(135deg,#1c2431,#04434e,#151938);
@@ -151,40 +153,26 @@ html {
     animation: 10s infinite fondoanimado
 }
 
-
 #sobremi {
+    height: 100vh;
+}
+
+.contenidoSobreMi {
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
 }
 
-@keyframes fondoanimado {
-    0%,100% {
-        background-position: 0 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 .contenidoSeccion {
+    margin-bottom: 2em;
     flex-direction: column;
     display: flex;
     align-items: center;
     color: #fff;
-    width: 650px;
+    width: 50%;
 }
 
 .contenedorTarjeta {
@@ -195,10 +183,6 @@ html {
     justify-content: center
 }
 
-.contenidoSeccion h2 {
-    color: #82ebeb;
-    font-size: 3em
-}
 
 .contenidoSeccion p {
     font-size: 19px;
@@ -260,8 +244,15 @@ html {
     transform: rotateY(180deg);
 }
 
+/* -------------------------------------------- SKILLS  ------------------------------------------------*/
 #skills {
     height: 40vh;
+}
+
+.contenidoSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -292,18 +283,13 @@ html {
     cursor: pointer;
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
+/* -------------------------------------------- PROYECTOS ------------------------------------------------*/
 #proyectos {
+    height: 100vh;
     margin-top: 100px;
 }
+
+
 
 .animado {
     opacity: 0;
@@ -318,7 +304,7 @@ html {
 
 .tarjetaProyecto {
     height: 300px;
-    width: 40%;
+    width: 35%;
     flex-direction: column;
     background-color: #1c2431;
     transition: 1s;
@@ -334,6 +320,7 @@ html {
 }
 
 .contenidoProyectos {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -398,6 +385,10 @@ html {
     box-shadow: 0 0px 6px #39cccc
 }
 
+.contenedorNeon {
+    display: flex;
+    justify-content: center;
+}
 
 .textoNeon {
     margin-top: 20px;
@@ -413,11 +404,6 @@ html {
     animation: movimiento 30s linear infinite
 }
 
-@keyframes movimiento {
-    100% {
-        background-position: 2000px 0px;
-    }
-}
 
 .textoNeon:hover {
     text-shadow: 
@@ -437,7 +423,11 @@ html {
         align-items: center
     }
 
-    .sobremi {
+    #proyectos {
+        margin-top: 0px;
+    }
+
+    #sobremi {
         justify-content: space-evenly;
     }
 
@@ -520,6 +510,9 @@ html {
 }
 
 @media screen and (max-width: 394px) {
+    .textoNeon {
+        font-size: 2.5em;
+    }
     .contenedorImagenDatos {
         height: 100vh;
         flex-direction: column;
@@ -538,6 +531,40 @@ html {
     }
     .nombre {
         font-size: 4rem;
+    }
+}
+
+@keyframes fondoanimado {
+    0%,100% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movimiento {
+    100% {
+        background-position: 2000px 0px;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 
