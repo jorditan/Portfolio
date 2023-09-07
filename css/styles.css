@@ -285,7 +285,6 @@ html {
 
 /* -------------------------------------------- PROYECTOS ------------------------------------------------*/
 #proyectos {
-    height: 100vh;
     margin-top: 100px;
 }
 
@@ -498,11 +497,8 @@ html {
         width: 70%;
     }
     .contenidoImagen {
-        height: 30%;
+        height: 42%;
         width: 100%;
-    }
-    .foto {
-        height: 100%;
     }
     .nombre {
         font-size: 4rem;
@@ -567,6 +563,3 @@ html {
         transform: translateX(-100%);
     }
 }
-
-
-
