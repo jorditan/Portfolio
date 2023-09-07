@@ -18,6 +18,7 @@ html {
 
 .visible {
     opacity: 1;
+    visibility: visible;
 }
 
 /* -------------------------------------------- INICIO  ------------------------------------------------*/
@@ -296,7 +297,7 @@ html {
     transition: .7s ease-in-out all;
 }
 
-.visible {
+.visibleSeccion {
     opacity: 1;
     transform: scale(1);
 }

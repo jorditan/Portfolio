@@ -47,10 +47,10 @@ const aparecer = (entradas, observador) => {
 	*/
 	entradas.forEach((entrada) => {
 		if(entrada.isIntersecting){
-			entrada.target.classList.add('visible');
+			entrada.target.classList.add('visibleSeccion');
 		}
 		else {
-			entrada.target.classList.remove('visible');
+			entrada.target.classList.remove('visibleSeccion');
 		}
 	})
 }
