@@ -5,7 +5,6 @@ html , body {
     overflow-x: hidden;
 }
 
-
 @keyframes fondoanimado {
     0% {
         background-position: 0% 50%;
@@ -20,11 +19,15 @@ html , body {
     }
 }
 
+main {
+    height: 100vh;
+}
+
 .contenedor {
+    height: 100%;
     background-image: linear-gradient(135deg, #1c2431, #04434e, #151938);
     background-size: 500%;
     animation: fondoanimado 10s infinite;
-    height: 100vh;
 }
 
 .titulo {
@@ -74,7 +77,8 @@ label {
 }
 
 .alerta {
-    width: 50%;
+    width: 100%;
+    justify-content: center;
     text-align: center;
     margin: auto;
     color: red;
@@ -187,21 +191,24 @@ label {
     0 0 320px rgba(0, 255, 255, 0.5);
 }
 
-.visible {
-    opacity: 1;
-    visibility: visible;
-}
 
 @media screen and (max-width: 860px) {
     main {
-        height: 100%;
+        height: auto;
     }
-
     .contenedor {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .columnaIzquierda {
+        width: 100%;
+        margin: 20px;
+    }
+    .columnaDerecha {
+        width: 100%;
+        margin: 20px;
     }
 
     .campos {
@@ -221,5 +228,15 @@ label {
 @media screen and (max-width: 450px) {
     .campos {
         width: 200px;
+    }
+    .textoNeon {
+        font-size: 2em;
+    }
+}
+
+
+@media screen and (max-heigth: 900px) {
+    main {
+        height: auto;
     }
 }
